@@ -411,7 +411,7 @@ function Hero() {
             Available for full-time opportunities
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }}
-            className="whitespace-nowrap text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-[0.95] text-olive-900">
+            className="break-words sm:whitespace-nowrap text-[2rem] leading-[1] sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight text-olive-900">
             <span className="gradient-text">VATSAL J. CHHATBAR</span>
           </motion.h1>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-5 text-xl md:text-2xl text-stone-700">
@@ -457,7 +457,7 @@ function Hero() {
                 <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 <span className="ml-2 text-xs mono text-cream-100/50">~ vatsal — bash</span>
               </div>
-              <div className="p-5 mono text-[13px] leading-6">
+              <div className="p-4 sm:p-5 mono text-xs sm:text-[13px] leading-5 sm:leading-6 overflow-x-auto">
                 <div><span className="text-emerald-400">➜ vatsal</span> <span className="text-olive-300">who_am_i</span></div>
                 <div className="text-cream-100/80">VATSAL J. CHHATBAR· .NET Full Stack Developer</div>
                 <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span> <span className="text-olive-300">cat</span> stack.json</div>
@@ -585,7 +585,7 @@ function Experience() {
         {EXPERIENCE.map((e, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className={`relative grid md:grid-cols-2 gap-6 mb-10 ${i % 2 === 0 ? '' : 'md:[direction:rtl]'}`}>
-            <div className={`md:[direction:ltr] ${i % 2 === 0 ? 'md:pr-10 md:text-right' : 'md:pl-10'}`}>
+            <div className={`md:[direction:ltr] pl-12 ${i % 2 === 0 ? 'md:pl-0 md:pr-10 md:text-right' : 'md:pl-10'}`}>
               <div className="gradient-border p-6">
                 <div className="text-xs mono text-olive-600/80">{e.period}</div>
                 <h3 className="mt-1 text-xl font-bold">{e.role}</h3>
