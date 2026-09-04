@@ -33,27 +33,27 @@ const ROLES = ['.NET Developer', 'Backend Engineer', 'Full Stack Developer', 'Mi
 const SKILLS = {
   Backend: {
     icon: Server,
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-olive-500 to-olive-700',
     items: ['C#', '.NET', 'ASP.NET Core', 'ASP.NET Core MVC', 'REST APIs'],
   },
   Frontend: {
     icon: Code2,
-    color: 'from-indigo-500 to-blue-500',
+    color: 'from-olive-600 to-olive-700',
     items: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'AJAX', 'Kendo UI'],
   },
   Databases: {
     icon: Database,
-    color: 'from-cyan-500 to-teal-500',
+    color: 'from-olive-500 to-olive-700',
     items: ['PostgreSQL', 'MySQL'],
   },
   Architecture: {
     icon: Layers,
-    color: 'from-violet-500 to-indigo-500',
+    color: 'from-olive-700 to-olive-800',
     items: ['RabbitMQ', 'Redis', 'Elasticsearch', 'Microservices'],
   },
   'Dev Tools': {
     icon: Wrench,
-    color: 'from-sky-500 to-blue-600',
+    color: 'from-olive-400 to-olive-800',
     items: ['Git', 'GitHub', 'Visual Studio', 'VS Code'],
   },
 };
@@ -92,7 +92,7 @@ const PROJECTS = [
       'Role-based dashboards',
     ],
     tech: ['ASP.NET Core', 'C#', 'RabbitMQ', 'Elasticsearch', 'PostgreSQL'],
-    accent: 'from-emerald-500 via-teal-500 to-cyan-500',
+    accent: 'from-emerald-600 via-olive-600 to-olive-800',
     icon: '🌾',
     github: 'https://github.com/Vatsal1612',
     demo: '#',
@@ -109,7 +109,7 @@ const PROJECTS = [
       'Fully responsive UI',
     ],
     tech: ['ASP.NET Core MVC', 'C#', 'Redis', 'RabbitMQ', 'PostgreSQL'],
-    accent: 'from-blue-500 via-indigo-500 to-violet-500',
+    accent: 'from-stone-600 via-olive-700 to-olive-900',
     icon: '🏥',
     github: 'https://github.com/Vatsal1612',
     demo: '#',
@@ -126,7 +126,7 @@ const PROJECTS = [
       'AJAX-driven interactions',
     ],
     tech: ['ASP.NET Core', 'C#', 'JWT', 'AJAX', 'PostgreSQL'],
-    accent: 'from-cyan-500 via-sky-500 to-blue-600',
+    accent: 'from-olive-500 via-olive-700 to-olive-800',
     icon: '✅',
     github: 'https://github.com/Vatsal1612',
     demo: '#',
@@ -138,7 +138,7 @@ const PROJECTS = [
       'Full pharmacy operations software covering inventory, prescriptions, and billing workflows.',
     features: ['Inventory tracking', 'Billing & invoices', 'MySQL data layer', 'PHP backend'],
     tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap'],
-    accent: 'from-fuchsia-500 via-purple-500 to-indigo-500',
+    accent: 'from-stone-500 via-olive-700 to-olive-900',
     icon: '💊',
     github: 'https://github.com/Vatsal1612',
     demo: '#',
@@ -252,7 +252,7 @@ function Splash({ done }) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.6 } }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0b1220]"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#262B1B]"
         >
           <div className="relative">
             <motion.div
@@ -264,9 +264,9 @@ function Splash({ done }) {
               initial={{ width: 0 }}
               animate={{ width: '100%' }}
               transition={{ duration: 1.2, ease: 'easeInOut' }}
-              className="mt-4 h-[2px] bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-400 rounded-full"
+              className="mt-4 h-[2px] bg-gradient-to-r from-olive-600 via-olive-700 to-olive-500 rounded-full"
             />
-            <div className="mt-3 text-xs text-slate-400 mono tracking-widest">LOADING PORTFOLIO…</div>
+            <div className="mt-3 text-xs text-cream-100/60 mono tracking-widest">LOADING PORTFOLIO…</div>
           </div>
         </motion.div>
       )}
@@ -291,10 +291,10 @@ function Cursor() {
   return (
     <>
       <motion.div style={{ x: dx, y: dy }} className="pointer-events-none fixed left-0 top-0 z-[90] hidden md:block">
-        <div className="-translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border border-cyan-400/70 mix-blend-difference" />
+        <div className="-translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full border border-olive-500/70 mix-blend-difference" />
       </motion.div>
       <motion.div style={{ x, y }} className="pointer-events-none fixed left-0 top-0 z-[90] hidden md:block">
-        <div className="-translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-300" />
+        <div className="-translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-olive-400" />
       </motion.div>
     </>
   );
@@ -313,25 +313,24 @@ function Navbar({ active, onOpenCmd }) {
       <div className="mx-auto max-w-6xl px-4">
         <div className={`glass rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between ${scrolled ? 'shadow-xl shadow-black/30' : ''}`}>
           <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 via-indigo-500 to-cyan-400 grid place-items-center font-black text-white shadow-lg shadow-blue-500/30">V</div>
-            <span className="font-semibold tracking-tight">Vatsal<span className="text-cyan-400">.</span></span>
+            <img src="/favicon.png" alt="Vatsal logo" className="w-12 h-12 object-contain" />
           </a>
           <nav className="hidden lg:flex items-center gap-1">
             {NAV.map((n) => (
               <a key={n.id} href={`#${n.id}`}
-                className={`px-3 py-1.5 rounded-full text-sm transition-colors ${active === n.id ? 'text-white bg-white/10' : 'text-slate-400 hover:text-white hover:bg-white/5'}`}
+                className={`px-3 py-1.5 rounded-full text-sm transition-colors ${active === n.id ? 'text-olive-900 bg-black/10' : 'text-stone-600 hover:text-olive-900 hover:bg-black/5'}`}
               >{n.label}</a>
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <button onClick={onOpenCmd} className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg glass text-xs text-slate-400 hover:text-white transition-colors">
-              <Search className="w-3.5 h-3.5" /> Search <kbd className="ml-1 px-1.5 py-0.5 rounded bg-white/10 mono">⌘K</kbd>
+            <button onClick={onOpenCmd} className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg glass text-xs text-stone-600 hover:text-olive-900 transition-colors">
+              <Search className="w-3.5 h-3.5" /> Search <kbd className="ml-1 px-1.5 py-0.5 rounded bg-black/10 mono">⌘K</kbd>
             </button>
-            <a href="/Vatsal_Chhatbar_Resume.pdf" download
-              className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-sm font-medium hover:opacity-90 transition">
+            <a href="/Vatsal_Chhatbar_Resume.pdf" download="Vatsal_Chhatbar_Resume.pdf"
+              className="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-olive-600 to-olive-800 text-cream-50 text-sm font-medium hover:opacity-90 transition">
               <Download className="w-4 h-4" /> Resume
             </a>
-            <button className="lg:hidden p-2 rounded-lg hover:bg-white/5" onClick={() => setOpen(!open)}>
+            <button className="lg:hidden p-2 rounded-lg hover:bg-black/5" onClick={() => setOpen(!open)}>
               {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
@@ -342,9 +341,9 @@ function Navbar({ active, onOpenCmd }) {
               className="lg:hidden mt-2 glass rounded-2xl p-3 grid grid-cols-2 gap-1">
               {NAV.map((n) => (
                 <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
-                  className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-white/5">{n.label}</a>
+                  className="px-3 py-2 rounded-lg text-sm text-stone-700 hover:text-olive-900 hover:bg-black/5">{n.label}</a>
               ))}
-              <a href="/Vatsal_Chhatbar_Resume.pdf" download className="col-span-2 mt-1 px-3 py-2 rounded-lg text-sm bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-center">Download Resume</a>
+              <a href="/Vatsal_Chhatbar_Resume.pdf" download="Vatsal_Chhatbar_Resume.pdf" className="col-span-2 mt-1 px-3 py-2 rounded-lg text-sm bg-gradient-to-r from-olive-600 to-olive-800 text-cream-50 text-center">Download Resume</a>
             </motion.div>
           )}
         </AnimatePresence>
@@ -366,12 +365,12 @@ function CodeBackground() {
     '    var app = builder.Build();',
     '    app.MapControllers();',
     '    await app.RunAsync();',
-    '    return Ok(new { author = "Vatsal Chhatbar" });',
+    '    return Ok(new { author = "Vatsal j. Chhatbar" });',
     '  }',
     '}',
   ], []);
   return (
-    <pre className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.09] mono text-[11px] leading-5 p-8 text-slate-300 select-none">
+    <pre className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.09] mono text-[11px] leading-5 p-8 text-stone-700 select-none">
       {Array.from({ length: 6 }).map((_, i) => (
         <div key={i}>{lines.join('\n')}{'\n\n'}</div>
       ))}
@@ -386,14 +385,25 @@ function Hero() {
       <div className="absolute inset-0 grid-bg" />
       <CodeBackground />
       {/* Blobs */}
-      <div className="absolute -top-24 -left-24 w-[520px] h-[520px] rounded-full bg-blue-600/30 blur-[120px] animate-blob" />
-      <div className="absolute top-1/3 -right-32 w-[520px] h-[520px] rounded-full bg-indigo-600/25 blur-[120px] animate-blob" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-0 left-1/3 w-[420px] h-[420px] rounded-full bg-cyan-500/20 blur-[110px] animate-blob" style={{ animationDelay: '4s' }} />
+      <div className="absolute -top-24 -left-24 w-[520px] h-[520px] rounded-full bg-olive-800/30 blur-[120px] animate-blob" />
+      <div className="absolute top-1/3 -right-32 w-[520px] h-[520px] rounded-full bg-olive-800/25 blur-[120px] animate-blob" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-0 left-1/3 w-[420px] h-[420px] rounded-full bg-olive-500/20 blur-[110px] animate-blob" style={{ animationDelay: '4s' }} />
 
       <div className="relative mx-auto max-w-6xl px-4 grid lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
+          <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }}
+            className="mb-6">
+            <div className="relative w-28 h-28 md:w-32 md:h-32">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-olive-400 via-olive-600 to-olive-800 opacity-80 blur-[2px]" />
+              <img
+                src="/profile.png"
+                alt="VATSAL J. CHHATBAR"
+                className="relative w-full h-full rounded-full object-cover border-4 border-cream-50 shadow-xl"
+              />
+            </div>
+          </motion.div>
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs text-slate-300 mb-6">
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass text-xs text-stone-700 mb-6">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
@@ -401,37 +411,36 @@ function Hero() {
             Available for full-time opportunities
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.05 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95]">
-            Vatsal <br />
-            <span className="gradient-text">Chhatbar</span>
+            className="whitespace-nowrap text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black tracking-tight leading-[0.95] text-olive-900">
+            <span className="gradient-text">VATSAL J. CHHATBAR</span>
           </motion.h1>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-5 text-xl md:text-2xl text-slate-300">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="mt-5 text-xl md:text-2xl text-stone-700">
             <span className="cursor-blink mono">{typed || ' '}</span>
           </motion.div>
           <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
-            className="mt-6 max-w-2xl text-slate-400 text-base md:text-lg leading-relaxed">
+            className="mt-6 max-w-2xl text-stone-600 text-base md:text-lg leading-relaxed">
             Results-driven .NET Full Stack Developer crafting scalable web apps with{' '}
-            <span className="text-white font-medium">ASP.NET Core MVC</span>, <span className="text-white font-medium">C#</span>, PostgreSQL, RabbitMQ, Redis & Elasticsearch. Building for healthcare, procurement, and productivity.
+            <span className="text-olive-900 font-medium">ASP.NET Core MVC</span>, <span className="text-olive-900 font-medium">C#</span>, PostgreSQL, RabbitMQ, Redis & Elasticsearch. Building for healthcare, procurement, and productivity.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}
             className="mt-8 flex flex-wrap items-center gap-3">
             <MagneticButton
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-shadow"
+              className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-olive-600 to-olive-800 text-cream-50 font-semibold shadow-lg shadow-olive-700/30 hover:shadow-olive-700/50 transition-shadow"
             >
               View Projects <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </MagneticButton>
-            <a href="/Vatsal_Chhatbar_Resume.pdf" download>
-              <MagneticButton className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass text-white font-semibold hover:bg-white/10 transition-colors">
+            <a href="/Vatsal_Chhatbar_Resume.pdf" download="Vatsal_Chhatbar_Resume.pdf">
+              <MagneticButton className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass text-olive-900 font-semibold hover:bg-black/10 transition-colors">
                 <Download className="w-4 h-4" /> Download Resume
               </MagneticButton>
             </a>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
-            className="mt-10 flex items-center gap-5 text-slate-400">
-            <a aria-label="GitHub" href="https://github.com/Vatsal1612" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-            <a aria-label="LinkedIn" href="https://linkedin.com/in/vatsalchhatbar" target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
-            <a aria-label="Email" href="mailto:vatsalchhatbar1234@gmail.com" className="hover:text-white transition-colors"><Mail className="w-5 h-5" /></a>
+            className="mt-10 flex items-center gap-5 text-stone-600">
+            <a aria-label="GitHub" href="https://github.com/Vatsal1612" target="_blank" rel="noreferrer" className="hover:text-olive-900 transition-colors"><Github className="w-5 h-5" /></a>
+            <a aria-label="LinkedIn" href="https://linkedin.com/in/vatsalchhatbar" target="_blank" rel="noreferrer" className="hover:text-olive-900 transition-colors"><Linkedin className="w-5 h-5" /></a>
+            <a aria-label="Email" href="mailto:vatsalchhatbar1234@gmail.com" className="hover:text-olive-900 transition-colors"><Mail className="w-5 h-5" /></a>
             <span className="hidden md:inline-flex items-center gap-1.5 text-xs mono"><MapPin className="w-3.5 h-3.5" /> Surat, India</span>
           </motion.div>
         </div>
@@ -440,27 +449,27 @@ function Hero() {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
           className="lg:col-span-5">
           <div className="relative animate-float">
-            <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-blue-500/40 via-indigo-500/30 to-cyan-400/30 blur-lg" />
-            <Card className="relative bg-[#0b1220]/90 border-white/10 rounded-2xl overflow-hidden">
-              <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/10 bg-white/[0.03]">
+            <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-olive-600/40 via-olive-700/30 to-olive-500/30 blur-lg" />
+            <Card className="relative bg-[#262B1B]/90 border-cream-100/10 rounded-2xl overflow-hidden">
+              <div className="flex items-center gap-2 px-4 py-2.5 border-b border-cream-100/10 bg-white/[0.03]">
                 <span className="w-3 h-3 rounded-full bg-red-500/80" />
                 <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
                 <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                <span className="ml-2 text-xs mono text-slate-400">~ vatsal — bash</span>
+                <span className="ml-2 text-xs mono text-cream-100/50">~ vatsal — bash</span>
               </div>
               <div className="p-5 mono text-[13px] leading-6">
-                <div><span className="text-emerald-400">➜ vatsal</span> <span className="text-cyan-400">whoami</span></div>
-                <div className="text-slate-300">Vatsal Chhatbar · .NET Full Stack Developer</div>
-                <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span> <span className="text-cyan-400">cat</span> stack.json</div>
-                <pre className="text-slate-300">{`{
+                <div><span className="text-emerald-400">➜ vatsal</span> <span className="text-olive-300">who_am_i</span></div>
+                <div className="text-cream-100/80">VATSAL J. CHHATBAR· .NET Full Stack Developer</div>
+                <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span> <span className="text-olive-300">cat</span> stack.json</div>
+                <pre className="text-cream-100/80">{`{
   "backend": [".NET", "ASP.NET Core"],
   "language": "C#",
   "db": ["PostgreSQL", "MySQL"],
   "infra": ["RabbitMQ", "Redis", "Elasticsearch"],
   "focus": "microservices"
 }`}</pre>
-                <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span> <span className="text-cyan-400">ls</span> projects/</div>
-                <div className="text-slate-300">FarmBridge  Clinic-MS  Task-MS  Pharmacy-MS</div>
+                <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span> <span className="text-olive-300">ls</span> projects/</div>
+                <div className="text-cream-100/80">FarmBridge  Clinic-MS  Task-MS  Pharmacy-MS</div>
                 <div className="mt-2"><span className="text-emerald-400">➜ vatsal</span><span className="cursor-blink" /></div>
               </div>
             </Card>
@@ -477,9 +486,9 @@ function Section({ id, eyebrow, title, subtitle, children }) {
       <div className="mx-auto max-w-6xl px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-100px' }}
           className="mb-12 md:mb-16">
-          <div className="text-xs mono uppercase tracking-[0.25em] text-cyan-400/80">{eyebrow}</div>
+          <div className="text-xs mono uppercase tracking-[0.25em] text-olive-600/80">{eyebrow}</div>
           <h2 className="mt-3 text-3xl md:text-5xl font-black tracking-tight">{title}</h2>
-          {subtitle && <p className="mt-3 text-slate-400 max-w-2xl">{subtitle}</p>}
+          {subtitle && <p className="mt-3 text-stone-600 max-w-2xl">{subtitle}</p>}
         </motion.div>
         {children}
       </div>
@@ -499,9 +508,9 @@ function About() {
       subtitle="I design and build production-grade backends and full-stack systems, mixing rigorous fundamentals with modern .NET and microservices patterns.">
       <div className="grid md:grid-cols-12 gap-6">
         <div className="md:col-span-7 gradient-border p-6 md:p-8">
-          <p className="text-slate-300 leading-relaxed">
-            Results-driven <span className="text-white">.NET Full Stack Developer</span> with hands-on experience building scalable web applications using{' '}
-            <span className="text-white">ASP.NET Core MVC</span> and <span className="text-white">C#</span>. Skilled in modular systems, microservices architecture,
+          <p className="text-stone-700 leading-relaxed">
+            Results-driven <span className="text-olive-900">.NET Full Stack Developer</span> with hands-on experience building scalable web applications using{' '}
+            <span className="text-olive-900">ASP.NET Core MVC</span> and <span className="text-olive-900">C#</span>. Skilled in modular systems, microservices architecture,
             RabbitMQ, Redis, Elasticsearch, and PostgreSQL. Delivered real-world projects across healthcare, procurement, and task management.
           </p>
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -510,31 +519,31 @@ function About() {
                 <div className="text-2xl md:text-3xl font-black gradient-text">
                   <AnimatedCounter to={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-[11px] uppercase tracking-widest text-slate-400 mt-1">{s.label}</div>
+                <div className="text-[11px] uppercase tracking-widest text-stone-600 mt-1">{s.label}</div>
               </div>
             ))}
           </div>
         </div>
         <div className="md:col-span-5 space-y-4">
           <div className="gradient-border p-5 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-blue-500/15 grid place-items-center"><GraduationCap className="w-5 h-5 text-blue-400" /></div>
+            <div className="w-10 h-10 rounded-lg bg-olive-600/15 grid place-items-center"><GraduationCap className="w-5 h-5 text-olive-600" /></div>
             <div>
-              <div className="font-semibold">B.E. Computer Science</div>
-              <div className="text-sm text-slate-400">Government Engineering College, Patan · CGPA 7.73</div>
+              <div className="font-semibold">Bachelor of Engineering in Computer Science(CSE)</div>
+              <div className="text-sm text-stone-600">Government Engineering College, Patan · CGPA 7.73</div>
             </div>
           </div>
           <div className="gradient-border p-5 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-indigo-500/15 grid place-items-center"><Briefcase className="w-5 h-5 text-indigo-400" /></div>
+            <div className="w-10 h-10 rounded-lg bg-olive-700/15 grid place-items-center"><Briefcase className="w-5 h-5 text-olive-600" /></div>
             <div>
               <div className="font-semibold">Casepoint Pvt. Ltd. · Intern</div>
-              <div className="text-sm text-slate-400">Full Stack Software Development · Jan 2026 – May 2026</div>
+              <div className="text-sm text-stone-600">Full Stack Software Development · Jan 2026 – May 2026</div>
             </div>
           </div>
           <div className="gradient-border p-5 flex items-start gap-4">
-            <div className="w-10 h-10 rounded-lg bg-cyan-500/15 grid place-items-center"><Sparkles className="w-5 h-5 text-cyan-400" /></div>
+            <div className="w-10 h-10 rounded-lg bg-olive-500/15 grid place-items-center"><Sparkles className="w-5 h-5 text-olive-600" /></div>
             <div>
               <div className="font-semibold">Recognition</div>
-              <div className="text-sm text-slate-400">Governor Award · SIH College Rank 3</div>
+              <div className="text-sm text-stone-600">Governor Award · SIH College Rank 3</div>
             </div>
           </div>
         </div>
@@ -552,13 +561,13 @@ function Skills() {
             transition={{ delay: idx * 0.05 }} className="gradient-border p-6 tilt-card">
             <div className="flex items-center gap-3 mb-4">
               <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${meta.color} grid place-items-center shadow-lg`}>
-                <meta.icon className="w-5 h-5 text-white" />
+                <meta.icon className="w-5 h-5 text-cream-50" />
               </div>
               <div className="font-semibold text-lg">{group}</div>
             </div>
             <div className="flex flex-wrap gap-2">
               {meta.items.map((s) => (
-                <Badge key={s} variant="secondary" className="bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10">{s}</Badge>
+                <Badge key={s} variant="secondary" className="bg-black/5 hover:bg-black/10 text-stone-700 border border-black/10">{s}</Badge>
               ))}
             </div>
           </motion.div>
@@ -572,35 +581,35 @@ function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title=".NET Developer Experience" subtitle="Hands-on across the SDLC — from architecture to performance tuning.">
       <div className="relative">
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-500/40 via-indigo-500/30 to-transparent" />
+        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-olive-600/40 via-olive-700/30 to-transparent" />
         {EXPERIENCE.map((e, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
             className={`relative grid md:grid-cols-2 gap-6 mb-10 ${i % 2 === 0 ? '' : 'md:[direction:rtl]'}`}>
             <div className={`md:[direction:ltr] ${i % 2 === 0 ? 'md:pr-10 md:text-right' : 'md:pl-10'}`}>
               <div className="gradient-border p-6">
-                <div className="text-xs mono text-cyan-400/80">{e.period}</div>
+                <div className="text-xs mono text-olive-600/80">{e.period}</div>
                 <h3 className="mt-1 text-xl font-bold">{e.role}</h3>
-                <div className="text-slate-400">{e.company} · {e.location}</div>
-                <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                <div className="text-stone-600">{e.company} · {e.location}</div>
+                <ul className="mt-4 space-y-2 text-sm text-stone-700">
                   {e.achievements.map((a) => (
                     <li key={a} className="flex gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-emerald-400 shrink-0" /><span>{a}</span></li>
                   ))}
                 </ul>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {e.tech.map((t) => <Badge key={t} className="bg-blue-500/10 text-blue-300 border-blue-500/20 hover:bg-blue-500/20">{t}</Badge>)}
+                  {e.tech.map((t) => <Badge key={t} className="bg-olive-600/10 text-olive-700 border-olive-600/20 hover:bg-olive-600/20">{t}</Badge>)}
                 </div>
                 <div className="mt-5 grid grid-cols-3 gap-2">
                   {e.metrics.map((m) => (
                     <div key={m.label} className="rounded-lg glass p-3 text-center">
                       <div className="text-lg font-black gradient-text">{m.value}</div>
-                      <div className="text-[10px] uppercase tracking-widest text-slate-400">{m.label}</div>
+                      <div className="text-[10px] uppercase tracking-widest text-stone-600">{m.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
             <div className="hidden md:block" />
-            <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 ring-4 ring-[#0b1220]" />
+            <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-to-br from-olive-600 to-olive-500 ring-4 ring-[#F7F1E1]" />
           </motion.div>
         ))}
       </div>
@@ -618,28 +627,28 @@ function ProjectCard({ p, i }) {
           <div className="text-6xl drop-shadow-2xl">{p.icon}</div>
         </div>
         <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-          <div className="text-xs mono text-white/90">{p.tag}</div>
-          <div className="text-[10px] mono text-white/80 uppercase tracking-widest">Case Study</div>
+          <div className="text-xs mono text-cream-50/90">{p.tag}</div>
+          <div className="text-[10px] mono text-cream-50/80 uppercase tracking-widest">Case Study</div>
         </div>
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold">{p.title}</h3>
-        <p className="mt-2 text-sm text-slate-400 leading-relaxed">{p.description}</p>
-        <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-slate-300">
+        <p className="mt-2 text-sm text-stone-600 leading-relaxed">{p.description}</p>
+        <ul className="mt-4 grid grid-cols-1 gap-1.5 text-sm text-stone-700">
           {p.features.map((f) => (
-            <li key={f} className="flex gap-2"><Zap className="w-3.5 h-3.5 mt-1 text-cyan-400 shrink-0" /><span>{f}</span></li>
+            <li key={f} className="flex gap-2"><Zap className="w-3.5 h-3.5 mt-1 text-olive-600 shrink-0" /><span>{f}</span></li>
           ))}
         </ul>
         <div className="mt-4 flex flex-wrap gap-1.5">
           {p.tech.map((t) => (
-            <span key={t} className="text-[11px] px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-slate-300 mono">{t}</span>
+            <span key={t} className="text-[11px] px-2 py-0.5 rounded-md bg-black/5 border border-black/10 text-stone-700 mono">{t}</span>
           ))}
         </div>
         <div className="mt-5 flex items-center gap-2">
-          <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg glass text-sm hover:bg-white/10">
+          <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg glass text-sm hover:bg-black/10">
             <Github className="w-4 h-4" /> Code
           </a>
-          <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-500 text-sm text-white hover:opacity-90">
+          <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-olive-600 to-olive-800 text-sm text-cream-50 hover:opacity-90">
             <ExternalLink className="w-4 h-4" /> Live Demo
           </a>
         </div>
@@ -665,14 +674,14 @@ function Achievements() {
         {ACHIEVEMENTS.map((a, i) => (
           <motion.div key={a.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
             className="relative glass rounded-2xl p-8 overflow-hidden">
-            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-blue-500/20 blur-3xl" />
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-olive-600/20 blur-3xl" />
             <div className="flex items-start gap-4">
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-400/20 to-amber-500/20 border border-yellow-400/20 grid place-items-center">
                 <a.icon className="w-7 h-7 text-yellow-300" />
               </div>
               <div>
                 <div className="text-lg font-bold">{a.title}</div>
-                <div className="text-slate-400">{a.detail}</div>
+                <div className="text-stone-600">{a.detail}</div>
               </div>
             </div>
           </motion.div>
@@ -689,12 +698,12 @@ function Certifications() {
         {CERTIFICATIONS.map((c, i) => (
           <motion.div key={c.title} initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
             className="gradient-border p-6 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-500/20 grid place-items-center">
-              <c.icon className="w-6 h-6 text-blue-300" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-olive-600/20 to-olive-800/20 border border-olive-600/20 grid place-items-center">
+              <c.icon className="w-6 h-6 text-olive-700" />
             </div>
             <div>
               <div className="font-semibold">{c.title}</div>
-              <div className="text-sm text-slate-400">{c.issuer}</div>
+              <div className="text-sm text-stone-600">{c.issuer}</div>
             </div>
           </motion.div>
         ))}
@@ -710,15 +719,15 @@ function Blog() {
       <div className="grid md:grid-cols-2 gap-6">
         {BLOG_POSTS.map((b, i) => (
           <motion.article key={b.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }}
-            className="group gradient-border p-6 hover:bg-white/[0.02] transition-colors cursor-pointer">
-            <div className="flex items-center gap-3 text-xs mono text-slate-400">
-              <span className="px-2 py-0.5 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-300">{b.tag}</span>
+            className="group gradient-border p-6 hover:bg-black/[0.02] transition-colors cursor-pointer">
+            <div className="flex items-center gap-3 text-xs mono text-stone-600">
+              <span className="px-2 py-0.5 rounded-md bg-olive-600/10 border border-olive-600/20 text-olive-700">{b.tag}</span>
               <span>{b.date}</span>
               <span>· {b.minutes} min read</span>
             </div>
-            <h3 className="mt-3 text-xl font-bold group-hover:text-cyan-300 transition-colors">{b.title}</h3>
-            <p className="mt-2 text-slate-400 text-sm leading-relaxed">{b.excerpt}</p>
-            <div className="mt-4 inline-flex items-center gap-2 text-sm text-cyan-300">
+            <h3 className="mt-3 text-xl font-bold group-hover:text-olive-600 transition-colors">{b.title}</h3>
+            <p className="mt-2 text-stone-600 text-sm leading-relaxed">{b.excerpt}</p>
+            <div className="mt-4 inline-flex items-center gap-2 text-sm text-olive-600">
               Read article <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
             </div>
           </motion.article>
@@ -759,7 +768,7 @@ function Contact() {
   };
 
   return (
-    <Section id="contact" eyebrow="Contact" title="Hire .NET Developer India" subtitle="Have a role, project, or collaboration in mind? Let\u2019s talk.">
+    <Section id="contact" eyebrow="Contact" title="Hire .NET Developer India" subtitle="Have a role, project, or collaboration in mind? Let us talk.">
       <div className="grid lg:grid-cols-5 gap-6">
         <div className="lg:col-span-2 space-y-4">
           {[
@@ -769,11 +778,11 @@ function Contact() {
             { icon: Github, label: 'GitHub', value: 'github.com/Vatsal1612', href: 'https://github.com/Vatsal1612' },
           ].map((c) => (
             <a key={c.label} href={c.href} target="_blank" rel="noreferrer"
-              className="gradient-border p-4 flex items-center gap-4 hover:bg-white/[0.03] transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-blue-500/15 border border-blue-500/20 grid place-items-center"><c.icon className="w-5 h-5 text-blue-300" /></div>
+              className="gradient-border p-4 flex items-center gap-4 hover:bg-black/[0.03] transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-olive-600/15 border border-olive-600/20 grid place-items-center"><c.icon className="w-5 h-5 text-olive-700" /></div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-slate-400">{c.label}</div>
-                <div className="font-medium text-slate-100 text-sm break-all">{c.value}</div>
+                <div className="text-xs uppercase tracking-widest text-stone-600">{c.label}</div>
+                <div className="font-medium text-stone-800 text-sm break-all">{c.value}</div>
               </div>
             </a>
           ))}
@@ -781,30 +790,30 @@ function Contact() {
         <form onSubmit={submit} className="lg:col-span-3 gradient-border p-6 md:p-8 space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="text-xs uppercase tracking-widest text-slate-400">Name</label>
+              <label className="text-xs uppercase tracking-widest text-stone-600">Name</label>
               <Input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="John Doe" className="mt-1 bg-white/5 border-white/10" />
+                placeholder="John Doe" className="mt-1 bg-black/5 border-black/10" />
             </div>
             <div>
-              <label className="text-xs uppercase tracking-widest text-slate-400">Email</label>
+              <label className="text-xs uppercase tracking-widest text-stone-600">Email</label>
               <Input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="you@company.com" className="mt-1 bg-white/5 border-white/10" />
+                placeholder="you@company.com" className="mt-1 bg-black/5 border-black/10" />
             </div>
           </div>
           <div>
-            <label className="text-xs uppercase tracking-widest text-slate-400">Subject</label>
+            <label className="text-xs uppercase tracking-widest text-stone-600">Subject</label>
             <Input value={form.subject} onChange={(e) => setForm({ ...form, subject: e.target.value })}
-              placeholder=".NET Developer Role at Acme" className="mt-1 bg-white/5 border-white/10" />
+              placeholder=".NET Developer Role at Acme" className="mt-1 bg-black/5 border-black/10" />
           </div>
           <div>
-            <label className="text-xs uppercase tracking-widest text-slate-400">Message</label>
+            <label className="text-xs uppercase tracking-widest text-stone-600">Message</label>
             <Textarea rows={6} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })}
-              placeholder="Tell me a bit about the opportunity..." className="mt-1 bg-white/5 border-white/10" />
+              placeholder="Tell me a bit about the opportunity..." className="mt-1 bg-black/5 border-black/10" />
           </div>
           <div className="flex items-center justify-between">
-            <div className="text-xs text-slate-500">Usually respond within 24 hours.</div>
+            <div className="text-xs text-stone-500">Usually respond within 24 hours.</div>
             <Button type="submit" disabled={loading}
-              className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white hover:opacity-90">
+              className="bg-gradient-to-r from-olive-600 to-olive-800 text-cream-50 hover:opacity-90">
               {loading ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Sending</> : sent ? <><CheckCircle2 className="w-4 h-4 mr-2" /> Sent</> : <>Send Message <ArrowRight className="w-4 h-4 ml-2" /></>}
             </Button>
           </div>
@@ -816,13 +825,13 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="relative border-t border-white/5 mt-10">
+    <footer className="relative border-t border-black/5 mt-10">
       <div className="mx-auto max-w-6xl px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="text-sm text-slate-500">© {new Date().getFullYear()} Vatsal Chhatbar · Built with <span className="text-white">Next.js</span> & <span className="text-white">Tailwind</span></div>
-        <div className="flex items-center gap-4 text-slate-400">
-          <a aria-label="GitHub" href="https://github.com/Vatsal1612" className="hover:text-white"><Github className="w-5 h-5" /></a>
-          <a aria-label="LinkedIn" href="https://linkedin.com/in/vatsalchhatbar" className="hover:text-white"><Linkedin className="w-5 h-5" /></a>
-          <a aria-label="Email" href="mailto:vatsalchhatbar1234@gmail.com" className="hover:text-white"><Mail className="w-5 h-5" /></a>
+        <div className="text-sm text-stone-500">© {new Date().getFullYear()} VATSAL J. CHHATBAR · Built with <span className="text-olive-900">Next.js</span> & <span className="text-olive-900">Tailwind</span></div>
+        <div className="flex items-center gap-4 text-stone-600">
+          <a aria-label="GitHub" href="https://github.com/Vatsal1612" className="hover:text-olive-900"><Github className="w-5 h-5" /></a>
+          <a aria-label="LinkedIn" href="https://linkedin.com/in/vatsalchhatbar" className="hover:text-olive-900"><Linkedin className="w-5 h-5" /></a>
+          <a aria-label="Email" href="mailto:vatsalchhatbar1234@gmail.com" className="hover:text-olive-900"><Mail className="w-5 h-5" /></a>
         </div>
       </div>
     </footer>
@@ -842,9 +851,9 @@ function BackToTop() {
         <motion.button
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 grid place-items-center shadow-lg shadow-blue-500/40 hover:scale-110 transition-transform"
+          className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-gradient-to-br from-olive-600 to-olive-800 grid place-items-center shadow-lg shadow-olive-700/40 hover:scale-110 transition-transform"
           aria-label="Back to top"
-        ><ChevronUp className="w-5 h-5 text-white" /></motion.button>
+        ><ChevronUp className="w-5 h-5 text-cream-50" /></motion.button>
       )}
     </AnimatePresence>
   );
@@ -853,7 +862,7 @@ function BackToTop() {
 function ScrollProgress() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 200, damping: 30 });
-  return <motion.div style={{ scaleX }} className="fixed top-0 left-0 right-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-400" />;
+  return <motion.div style={{ scaleX }} className="fixed top-0 left-0 right-0 z-[60] h-[3px] origin-left bg-gradient-to-r from-olive-600 via-olive-700 to-olive-500" />;
 }
 
 function CommandPalette({ open, setOpen }) {
@@ -883,20 +892,20 @@ function CommandPalette({ open, setOpen }) {
           <motion.div initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -10, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
             className="w-full max-w-lg mx-auto glass rounded-2xl overflow-hidden shadow-2xl">
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-white/10">
-              <Search className="w-4 h-4 text-slate-400" />
+            <div className="flex items-center gap-3 px-4 py-3 border-b border-black/10">
+              <Search className="w-4 h-4 text-stone-600" />
               <input autoFocus value={q} onChange={(e) => setQ(e.target.value)}
                 placeholder="Type a command or search…"
                 className="flex-1 bg-transparent outline-none text-sm" />
-              <kbd className="text-[10px] mono px-1.5 py-0.5 rounded bg-white/10">ESC</kbd>
+              <kbd className="text-[10px] mono px-1.5 py-0.5 rounded bg-black/10">ESC</kbd>
             </div>
             <div className="max-h-80 overflow-y-auto">
-              {filtered.length === 0 && <div className="p-6 text-sm text-slate-400 text-center">No results.</div>}
+              {filtered.length === 0 && <div className="p-6 text-sm text-stone-600 text-center">No results.</div>}
               {filtered.map((it) => (
                 <button key={it.label} onClick={() => { it.action(); setOpen(false); }}
-                  className="w-full flex items-center justify-between text-left px-4 py-2.5 hover:bg-white/5">
+                  className="w-full flex items-center justify-between text-left px-4 py-2.5 hover:bg-black/5">
                   <span className="text-sm">{it.label}</span>
-                  <span className="text-[10px] mono uppercase tracking-widest text-slate-500">{it.type}</span>
+                  <span className="text-[10px] mono uppercase tracking-widest text-stone-500">{it.type}</span>
                 </button>
               ))}
             </div>

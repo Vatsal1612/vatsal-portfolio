@@ -6,25 +6,25 @@
 
 @layer base {
   :root {
-    --background: 222 47% 5%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 7%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 32% 14%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 32% 17%;
-    --accent-foreground: 210 40% 98%;
+    --background: 44 58% 93%;
+    --foreground: 85 23% 16%;
+    --card: 44 65% 95%;
+    --card-foreground: 85 23% 16%;
+    --popover: 44 65% 95%;
+    --popover-foreground: 85 23% 16%;
+    --primary: 80 34% 33%;
+    --primary-foreground: 44 65% 95%;
+    --secondary: 45 49% 88%;
+    --secondary-foreground: 85 23% 16%;
+    --muted: 45 49% 88%;
+    --muted-foreground: 42 14% 37%;
+    --accent: 70 37% 87%;
+    --accent-foreground: 82 30% 21%;
     --destructive: 0 62% 30%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 217 91% 60%;
+    --destructive-foreground: 44 65% 95%;
+    --border: 44 35% 79%;
+    --input: 44 35% 79%;
+    --ring: 80 34% 33%;
     --radius: 0.75rem;
   }
 }
@@ -46,16 +46,16 @@ code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: hsl(222 47% 5%); }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #3b82f6, #6366f1); border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #60a5fa, #818cf8); }
+::-webkit-scrollbar-track { background: hsl(44 58% 93%); }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #74893F, #4C5B31); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #93A35B, #5F7238); }
 
 /* Selection */
-::selection { background: rgba(99, 102, 241, 0.35); color: #fff; }
+::selection { background: rgba(95, 114, 56, 0.30); color: #2B3320; }
 
 /* Utility layers */
 .gradient-text {
-  background: linear-gradient(120deg, #60a5fa 0%, #818cf8 45%, #22d3ee 100%);
+  background: linear-gradient(120deg, #4C5B31 0%, #74893F 50%, #A98B3F 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -63,7 +63,7 @@ code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
 
 .gradient-border {
   position: relative;
-  background: hsl(222 47% 7%);
+  background: hsl(44 65% 95%);
   border-radius: var(--radius);
 }
 .gradient-border::before {
@@ -71,7 +71,7 @@ code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
   position: absolute; inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, rgba(59,130,246,0.6), rgba(99,102,241,0.5), rgba(34,211,238,0.4));
+  background: linear-gradient(135deg, rgba(95,114,56,0.55), rgba(76,91,49,0.45), rgba(169,139,63,0.35));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
           mask-composite: exclude;
@@ -79,19 +79,19 @@ code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
 }
 
 .glass {
-  background: linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+  background: linear-gradient(135deg, rgba(255,253,246,0.65), rgba(255,253,246,0.35));
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(95,114,56,0.15);
 }
 
-.glow-blue { box-shadow: 0 0 60px -10px rgba(59,130,246,0.5); }
-.glow-indigo { box-shadow: 0 0 60px -10px rgba(99,102,241,0.5); }
+.glow-blue { box-shadow: 0 0 60px -10px rgba(95,114,56,0.45); }
+.glow-indigo { box-shadow: 0 0 60px -10px rgba(76,91,49,0.45); }
 
 .grid-bg {
   background-image:
-    linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(95, 114, 56, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 114, 56, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 40%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 40%, transparent 100%);
@@ -124,7 +124,7 @@ code, pre, .mono { font-family: 'JetBrains Mono', monospace; }
   content: '|';
   margin-left: 2px;
   animation: blink 1s infinite;
-  color: #22d3ee;
+  color: #93A35B;
 }
 @keyframes blink { 50% { opacity: 0; } }
 

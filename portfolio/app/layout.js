@@ -6,8 +6,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://vatsalchhatbar.dev
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Vatsal Chhatbar | .NET Full Stack Developer Portfolio',
-    template: '%s | Vatsal Chhatbar',
+    default: 'VATSAL J. CHHATBAR | .NET Full Stack Developer Portfolio',
+    template: '%s | VATSAL J. CHHATBAR',
   },
   description:
     '.NET Full Stack Developer specializing in ASP.NET Core MVC, C#, PostgreSQL, RabbitMQ, Redis, Elasticsearch, and scalable microservices web applications.',
@@ -16,11 +16,11 @@ export const metadata = {
     'Full Stack Developer India', 'PostgreSQL Developer',
     'RabbitMQ Developer', 'Redis', 'Elasticsearch',
     'Microservices', 'Software Engineer Surat',
-    'Vatsal Chhatbar', '.NET Full Stack Developer Portfolio',
+    'Vatsal J. Chhatbar', '.NET Full Stack Developer Portfolio',
   ],
-  authors: [{ name: 'Vatsal Chhatbar', url: SITE_URL }],
-  creator: 'Vatsal Chhatbar',
-  publisher: 'Vatsal Chhatbar',
+  authors: [{ name: 'Vatsal J. Chhatbar', url: SITE_URL }],
+  creator: 'VATSAL J. CHHATBAR',
+  publisher: 'VATSAL J. CHHATBAR',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata = {
     title: 'Vatsal Chhatbar | .NET Full Stack Developer Portfolio',
     description:
       '.NET Full Stack Developer building scalable ASP.NET Core MVC apps with C#, PostgreSQL, RabbitMQ, Redis, Elasticsearch & microservices.',
-    siteName: 'Vatsal Chhatbar',
+    siteName: 'VATSAL J. CHHATBAR',
     locale: 'en_US',
   },
   twitter: {
@@ -44,9 +44,9 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
@@ -62,7 +62,7 @@ const jsonLd = {
     {
       '@type': 'Person',
       '@id': `${SITE_URL}/#person`,
-      name: 'Vatsal Chhatbar',
+      name: 'VATSAL J. CHHATBAR',
       url: SITE_URL,
       jobTitle: '.NET Full Stack Developer',
       email: 'mailto:vatsalchhatbar1234@gmail.com',
@@ -86,7 +86,7 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: 'Vatsal Chhatbar — .NET Full Stack Developer Portfolio',
+      name: 'VATSAL J. CHHATBAR — .NET Full Stack Developer Portfolio',
       description: '.NET Full Stack Developer Portfolio',
       publisher: { '@id': `${SITE_URL}/#person` },
       inLanguage: 'en-US',
@@ -94,9 +94,9 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#brand`,
-      name: 'Vatsal Chhatbar',
+      name: 'VATSAL J. CHHATBAR',
       url: SITE_URL,
-      logo: `${SITE_URL}/favicon.svg`,
+      logo: `${SITE_URL}/favicon.png`,
       founder: { '@id': `${SITE_URL}/#person` },
     },
     {
@@ -115,7 +115,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

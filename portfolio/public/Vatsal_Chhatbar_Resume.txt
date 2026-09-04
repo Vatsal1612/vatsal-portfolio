@@ -1,0 +1,45 @@
+VATSAL J. CHHATBAR
+.NET FULL STACK DEVELOPER
+Surat, India
+
+CONTACT
+Email: vatsalchhatbar1234@gmail.com
+Phone: +91 9316578854
+LinkedIn: https://linkedin.com/in/vatsalchhatbar
+GitHub: https://github.com/Vatsal1612
+
+SUMMARY
+Results-driven .NET Full Stack Developer building scalable web applications with ASP.NET Core MVC, C#, PostgreSQL, RabbitMQ, Redis, and Elasticsearch.
+
+EXPERIENCE
+Casepoint Pvt. Ltd. | Full Stack Software Development Intern
+Surat, India | January 2026 - May 2026
+- Built a scalable ASP.NET Core MVC application with 5+ business modules.
+- Improved page load performance by 25% through query and caching optimizations.
+- Optimized complex PostgreSQL queries with indexing and query planning.
+- Participated in the complete SDLC: design, development, testing, and release.
+
+SKILLS
+Backend: C#, .NET, ASP.NET Core, ASP.NET Core MVC, REST APIs
+Frontend: HTML, CSS, Bootstrap, JavaScript, AJAX, Kendo UI
+Databases: PostgreSQL, MySQL
+Architecture: RabbitMQ, Redis, Elasticsearch, Microservices
+Tools: Git, GitHub, Visual Studio, VS Code
+
+PROJECTS
+FarmBridge - Distributed procurement platform using ASP.NET Core, RabbitMQ, Elasticsearch, and PostgreSQL.
+Clinic Management System - Healthcare SaaS with scheduling, Redis caching, RabbitMQ, and PostgreSQL.
+Task Management System - JWT-secured task platform with role-based access and REST CRUD APIs.
+Pharmacy Management System - Inventory and billing system using PHP, MySQL, JavaScript, and Bootstrap.
+
+EDUCATION
+Bachelor of Engineering in Computer Science (CSE)
+Government Engineering College, Patan | CGPA: 7.73
+
+ACHIEVEMENTS
+Smart India Hackathon - College Level Rank 3
+Governor Award - Academic and extracurricular excellence
+
+CERTIFICATIONS
+Coursera Networking
+BSE FINTECH - Bombay Stock Exchange
