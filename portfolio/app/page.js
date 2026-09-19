@@ -95,7 +95,7 @@ const PROJECTS = [
     accent: 'from-emerald-600 via-olive-600 to-olive-800',
     icon: '🌾',
     github: 'https://github.com/Vatsal1612',
-    demo: '#',
+    document: '#',
   },
   {
     title: 'Clinic Management System',
@@ -112,7 +112,7 @@ const PROJECTS = [
     accent: 'from-stone-600 via-olive-700 to-olive-900',
     icon: '🏥',
     github: 'https://github.com/Vatsal1612',
-    demo: '#',
+    document: '#',
   },
   {
     title: 'Task Management System',
@@ -129,7 +129,7 @@ const PROJECTS = [
     accent: 'from-olive-500 via-olive-700 to-olive-800',
     icon: '✅',
     github: 'https://github.com/Vatsal1612',
-    demo: '#',
+    document: '#',
   },
   {
     title: 'Pharmacy Management System',
@@ -141,7 +141,7 @@ const PROJECTS = [
     accent: 'from-stone-500 via-olive-700 to-olive-900',
     icon: '💊',
     github: 'https://github.com/Vatsal1612',
-    demo: '#',
+    document: '#',
   },
 ];
 
@@ -590,9 +590,9 @@ function Experience() {
                 <div className="text-xs mono text-olive-600/80">{e.period}</div>
                 <h3 className="mt-1 text-xl font-bold">{e.role}</h3>
                 <div className="text-stone-600">{e.company} · {e.location}</div>
-                <ul className="mt-4 space-y-2 text-sm text-stone-700">
+                <ul className="mt-4 space-y-2 text-sm text-stone-700 text-left">
                   {e.achievements.map((a) => (
-                    <li key={a} className="flex gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-emerald-400 shrink-0" /><span>{a}</span></li>
+                    <li key={a} className="flex gap-2 items-start"><CheckCircle2 className="w-4 h-4 mt-0.5 text-emerald-400 shrink-0" /><span>{a}</span></li>
                   ))}
                 </ul>
                 <div className="mt-4 flex flex-wrap gap-2">
@@ -648,8 +648,8 @@ function ProjectCard({ p, i }) {
           <a href={p.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg glass text-sm hover:bg-black/10">
             <Github className="w-4 h-4" /> Code
           </a>
-          <a href={p.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-olive-600 to-olive-800 text-sm text-cream-50 hover:opacity-90">
-            <ExternalLink className="w-4 h-4" /> Live Demo
+          <a href={p.document} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-olive-600 to-olive-800 text-sm text-cream-50 hover:opacity-90">
+            <BookOpen className="w-4 h-4" /> Document
           </a>
         </div>
       </div>
