@@ -584,8 +584,8 @@ function Experience() {
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-olive-600/40 via-olive-700/30 to-transparent" />
         {EXPERIENCE.map((e, i) => (
           <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className={`relative grid md:grid-cols-2 gap-6 mb-10 ${i % 2 === 0 ? '' : 'md:[direction:rtl]'}`}>
-            <div className={`md:[direction:ltr] pl-12 ${i % 2 === 0 ? 'md:pl-0 md:pr-10 md:text-right' : 'md:pl-10'}`}>
+            className={`relative grid md:grid-cols-2 gap-6 mb-10 ${i % 2 !== 0 ? '' : 'md:[direction:rtl]'}`}>
+            <div className={`md:[direction:ltr] pl-12 ${i % 2 !== 0 ? 'md:pl-0 md:pr-10 md:text-right' : 'md:pl-10'}`}>
               <div className="gradient-border p-6">
                 <div className="text-xs mono text-olive-600/80">{e.period}</div>
                 <h3 className="mt-1 text-xl font-bold">{e.role}</h3>
