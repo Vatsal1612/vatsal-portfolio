@@ -46,11 +46,11 @@ const SKILLS = {
     color: 'from-olive-500 to-olive-700',
     items: ['PostgreSQL', 'MySQL'],
   },
-  Architecture: {
-    icon: Layers,
-    color: 'from-olive-700 to-olive-800',
-    items: ['RabbitMQ', 'Redis', 'Elasticsearch', 'Microservices'],
-  },
+  // Architecture: {
+  //   icon: Layers,
+  //   color: 'from-olive-700 to-olive-800',
+  //   items: ['RabbitMQ', 'Redis', 'Elasticsearch', 'Microservices'],
+  // },
   'Dev Tools': {
     icon: Wrench,
     color: 'from-olive-400 to-olive-800',
@@ -447,8 +447,8 @@ function Hero() {
 
         {/* Terminal Card */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-          className="lg:col-span-5">
-          <div className="relative animate-float">
+          className="lg:col-span-5 min-w-0">
+          <div className="relative animate-float w-full">
             <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-olive-600/40 via-olive-700/30 to-olive-500/30 blur-lg" />
             <Card className="relative bg-[#262B1B]/90 border-cream-100/10 rounded-2xl overflow-hidden">
               <div className="flex items-center gap-2 px-4 py-2.5 border-b border-cream-100/10 bg-white/[0.03]">
